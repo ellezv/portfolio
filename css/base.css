@@ -1,0 +1,24 @@
+header {
+  background-image: url("../img/header-background.jpeg");
+  height: 450px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  outline: 5px dotted blue;
+  color: #0E187F;
+}
+
+header h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+header h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#intro {
+  /*background-color: find a good color
+  color: find a good color*/
+}
