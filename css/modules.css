@@ -1,3 +1,22 @@
 @media only screen and (min-width: 640px){
   /*when I figure out what I want to do when it's a big screen I can do it here*/
 }
+
+
+#intro p{
+  padding-top: 50px;
+  /*background-color: find a good color
+  color: find a good color*/
+}
+
+.icon-mail:before {
+  content: "\ea83";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin:before {
+  content: "\eac9";
+}

@@ -14,11 +14,11 @@ header h1 {
 }
 
 header h3 {
+  margin-top : 10px;
   text-align: center;
   font-size: 30px;
 }
 
-#intro {
-  /*background-color: find a good color
-  color: find a good color*/
+main {
+  /*stay out of the freaking header*/
 }
