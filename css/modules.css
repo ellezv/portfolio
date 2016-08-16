@@ -1,3 +1,9 @@
+nav:hover ul {
+  display: block;
+  position: absolute;
+  margin-right: 0;
+  margin-top: 0px;
+}
 
 nav ul {
   display: none;
@@ -5,6 +11,8 @@ nav ul {
   list-style: none;
   clear: both;
 }
+
+
 
 #intro p{
   /*background-color: find a good color
