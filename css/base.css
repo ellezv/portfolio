@@ -1,9 +1,8 @@
 header {
   background-image: url("../img/header-background.jpeg");
-  height: 300px;
+  height: 200px;
   background-size: 100%;
   background-repeat: no-repeat;
-  outline: 5px dotted blue;
   color: #0E187F;
 }
 
@@ -23,8 +22,4 @@ header h3 {
 
 main section {
   margin-top: 50px;
-}
-
-.clear-that {
-  clear: both;
 }
