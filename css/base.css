@@ -1,8 +1,23 @@
-header {
-  background-image: url("../img/header-background.jpeg");
-  height: 200px;
-  background-size: 100%;
+* {
+  font-family: helvetica;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+
+}
+
+article {
+  border-bottom: 1px solid black;
+  margin: 0 3%;
+}
+
+.main-header {
+  background-image: url("../img/background.jpeg");
   background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .9;
   color: #0E187F;
 }
 
@@ -20,6 +35,27 @@ header h3 {
   font-size: 30px;
 }
 
-main section {
-  margin-top: 50px;
+
+.template {
+  display: none;
+}
+
+a:visited {
+  color: #0E187F;
+}
+
+#articles h1 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
+
+.byline {
+  font-style: italic;
+}
+
+.article-body {
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+  text-align: justify;
 }
