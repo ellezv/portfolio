@@ -1,10 +1,20 @@
+/* colors :
+sunflower : #FFCE00;
+starry night: #0375B4;
+evening: #26228;
+grey: #D5D5D5;
+
+*/
+
 * {
   font-family: helvetica;
+
 }
 
 body {
   line-height: 1.5;
   font-size: 100%;
+   background-color: #0375B4;
 
 }
 
@@ -18,7 +28,7 @@ article {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .9;
-  color: #0E187F;
+  color: white;
 }
 
 header h1 {
@@ -41,7 +51,7 @@ header h3 {
 }
 
 a:visited {
-  color: #0E187F;
+  color: #D5D5D5;
 }
 
 #articles h1 {
@@ -52,10 +62,20 @@ a:visited {
 
 .byline {
   font-style: italic;
+  color: #FFCE00;
 }
 
 .article-body {
   border-bottom: 1px solid black;
   padding-bottom: 25px;
   text-align: justify;
+}
+
+p {
+  color: grey;
+}
+
+
+main h1 {
+  color: white;
 }
