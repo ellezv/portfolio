@@ -1,3 +1,9 @@
+nav:hover ul {
+  display: block;
+  position: absolute;
+  margin-right: 0;
+  margin-top: 0px;
+}
 
 nav ul {
   display: none;
@@ -5,6 +11,8 @@ nav ul {
   list-style: none;
   clear: both;
 }
+
+
 
 #intro p{
   /*background-color: find a good color
@@ -18,8 +26,6 @@ nav ul {
 
 .icon-menu:before {
   content: "\e9bd";
-  float: right;
-  margin: 2% 1% 1% 0;
   font-size: 40px;
 }
 
@@ -34,7 +40,6 @@ nav ul {
 .icon-linkedin:before {
   content: "\eac9";
 }
-
 
 @media only screen and (min-width: 640px) {
   .icon-menu {
@@ -52,5 +57,12 @@ nav ul {
     display: inline;
     margin-right: 4%;
     font-size: 18px;
+  }
+
+  nav:hover ul {
+    display:block;
+    position:static;
+    margin-top: 15px;
+    text-align: center;
   }
 }
