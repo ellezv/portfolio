@@ -27,13 +27,11 @@ article {
   background-image: url("../img/background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .9;
-  color: white;
+  color: #1254A8;
 }
 
 header h1 {
 /*to do : find cool font*/
-  padding-top: 50px;
   text-align: center;
   font-size: 50px;
 }
@@ -58,6 +56,7 @@ a:visited {
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 40px;
+  color: #D5D5D5;
 }
 
 .byline {
@@ -72,10 +71,12 @@ a:visited {
 }
 
 p {
-  color: grey;
+  color: #D5D5D5;
 }
 
-
-main h1 {
-  color: white;
+main {
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 4em 1em;
 }
