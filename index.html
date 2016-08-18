@@ -20,17 +20,16 @@
         <nav>
           <div class="icon-menu"></div>
           <ul>
+            <li data-content="articles" class="nav-tab"><a href="#">Home</a></li>
+            <li data-content="about-me" class="nav-tab"><a href="#">About Me</a></li>
             <li><a href="https://www.linkedin.com/in/maelle-vance-179487123" target="_blank"><span class="icon-linkedin">LinkedIn</span></a></li>
             <li><a href="#" target="_blank"><span class="icon-github">Github</span></a></li>
-            <li><a href="mailto:maellevance@gmail.com"><span class="icon-mail">E-Mail</span></a></li>
           </ul>
         </nav>
       </section>
-      <section class="icons">
-      </section>
     </header>
     <main>
-      <section id="articles">
+      <section id="articles" class="menu-content">
                 <article class="template" data-category="placeholder-category">
                   <header class="article-header">
                     <h1>Title</h1>
@@ -40,13 +39,20 @@
                     </div>
                   </header>
                 <section class="article-body"></section>
+                <a href="#" class="read-on">Read on &rarr;</a>
               </article>
             </section>
+      <section id="about-me" class="menu-content">
+        <h1>Welcome to my portfolio</h1>
+        <p>I'm a former nurse turned web developper. I have a passion for healthcare, public health, data, tech and all the cool things they can do combined.<br>
+        In my spare time, you will find me spending time with my family, learning new things or trying to build something. Sometimes all at once.</p>
+      </section>
     </main>
     <footer>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/app2.js"></script>
   </body>
 </html>
