@@ -1,10 +1,20 @@
+/* colors :
+sunflower : #FFCE00;
+starry night: #0375B4;
+evening: #26228;
+grey: #D5D5D5;
+
+*/
+
 * {
   font-family: helvetica;
+
 }
 
 body {
   line-height: 1.5;
   font-size: 100%;
+   background-color: #0375B4;
 
 }
 
@@ -17,13 +27,12 @@ article {
   background-image: url("../img/background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .9;
-  color: #0E187F;
+  color: #1254A8;
 }
 
 header h1 {
 /*to do : find cool font*/
-  padding-top: 50px;
+  padding-top: 15px;
   text-align: center;
   font-size: 50px;
 }
@@ -31,6 +40,7 @@ header h1 {
 header h3 {
 /*to do: find cool font*/
   margin-top : 10px;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 30px;
 }
@@ -41,21 +51,34 @@ header h3 {
 }
 
 a:visited {
-  color: #0E187F;
+  color: #D5D5D5;
 }
 
-#articles h1 {
+main h1 {
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 40px;
+  color: #D5D5D5;
 }
 
 .byline {
   font-style: italic;
+  color: #FFCE00;
 }
 
 .article-body {
   border-bottom: 1px solid black;
   padding-bottom: 25px;
   text-align: justify;
+}
+
+p {
+  color: #D5D5D5;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 50em;
+  line-height: 1.5;
+  padding: 4em 1em;
 }

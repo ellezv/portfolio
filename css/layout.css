@@ -1,0 +1,23 @@
+.main-header {
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 4%;
+  left: 1%;
+}
+
+nav:hover ul {
+  display: block;
+  position: absolute;
+  margin-right: 0;
+  margin-top: 0px;
+}
+
+nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
