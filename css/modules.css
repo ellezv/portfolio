@@ -1,0 +1,56 @@
+
+nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+#intro p{
+  /*background-color: find a good color
+  color: find a good color*/
+}
+
+.icons {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+  float: right;
+  margin: 2% 1% 1% 0;
+  font-size: 40px;
+}
+
+.icon-mail:before {
+  content: "\ea83";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
+
+  nav ul {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    /*outline: 5px dotted green;*/
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 4%;
+    font-size: 18px;
+  }
+}
