@@ -15,11 +15,7 @@ Article.prototype.toHtml = function() {
   var source = $('#article-template').html();
   var templateRender = Handlebars.compile(source);
 
-
   return templateRender(this);
-
-
-
 };
 
 
