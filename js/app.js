@@ -9,19 +9,15 @@ function Article(obj) {
   this.category = obj.category;
 }
 
-/* method for my Article object constructor so it will have my data*/
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
-  $newArticle.find('.byline span').text(this.author);
-  $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
-  $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newArticle.find('h1').html(this.title);
-  $newArticle.find('.article-body').html(this.body);
-  $newArticle.attr('data-category', this.category);
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  var source = $('#article-template').html();
+  var templateRender = Handlebars.compile(source);
 
-  $newArticle.removeClass('template'); /* removing class so display changes from none to block */
-  return $newArticle;
+  return templateRender(this);
 };
+
 
 /* sort method so object in myLocalData array with most recent publishedOn(=property) date (=value) will be first in the array */
 myLocalData.sort(function(a, b) {
