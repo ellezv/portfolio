@@ -4,8 +4,8 @@
     "category":"201",
     "publishedOn":"08-12-2016",
     "body": "My final project for 301. \"Autism Screen\" allows parents to assess their child's risk for autism. Using the M-CHAT, a modified checklist developed by researchers, we generate a score representing the assessed risk for the child and provide parents with additional resources for early intervention. The parent can easily sign in to take the test, review the questions and, if needed, can later come back to log in and get their original score and all the resources.",
-    "imageFront": "http://placehold.it/400x150",
-    "imageBack" : "http://placehold.it/400x150",
+    "imageFront": "img/autismscreenfront.png",
+    "imageBack" : "img/autismscreenback.png",
     "author": "Maelle Vance"
 
   },
