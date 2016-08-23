@@ -25,5 +25,14 @@ articleView.handleShowMore = function() {
   });
 };
 
-articleView.handleNavMenu();
-articleView.handleShowMore();
+/* appending each article to my html as a new <article> within my #articles section*/
+articleView.RenderIndex = function() {
+  articles.forEach(function(a) {
+    $('#articles').append(a.toHtml());
+  });
+  articleView.handleNavMenu();
+  articleView.handleShowMore();
+  $('#screenshots').flip();
+};
+
+Article.fetchAll();
