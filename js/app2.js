@@ -11,16 +11,19 @@ articleView.handleNavMenu = function() {
 
 articleView.handleShowMore = function() {
   $('.article-body').hide();
+  $('.screenshots').hide();
   $('article').on('click', '.read-on', function() {
     event.preventDefault();
     console.log('THIS.PARENT', $(this).parent());
     $(this).parent().find('.article-body').show();
+    $(this).parent().find('.screenshots').show();
     $(this).html('Show less &rarr;').removeClass('read-on').addClass('show-less');
   });
 
   $('article').on('click', '.show-less', function() {
     event.preventDefault();
     $(this).parent().find('.article-body').hide();
+    $(this).parent().find('.screenshots').hide();
     $(this).html('Read on &rarr;').removeClass('show-less').addClass('read-on');
   });
 };
@@ -32,7 +35,7 @@ articleView.renderIndex = function() {
   });
   articleView.handleNavMenu();
   articleView.handleShowMore();
-  $('#screenshots').flip();
+  $('.screenshots').flip();
 };
 
 Article.fetchAll();
