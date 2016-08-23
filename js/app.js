@@ -21,7 +21,9 @@ Article.prototype.toHtml = function() {
 Article.loadAll = function(inputData) {
   inputData.sort(function(a, b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-  });
+  }).forEach(function(ele) {
+    Article.allArticles.push(new Article(ele));
+  })
 };
 
 Article.fetchAll = function() {
@@ -33,6 +35,6 @@ Article.fetchAll = function() {
       Article.loadAll(a);
       localStorage.projects = JSON.stringify(a);
       articleView.renderIndex();
-    }
+    });
   }
-}
+};
