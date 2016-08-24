@@ -1,4 +1,4 @@
-/* Object constructor based on my data*/
+'use strict';
 function Article(obj) {
   for (keys in obj) {
     this[keys] = obj[keys];
@@ -23,7 +23,7 @@ Article.loadAll = function(inputData) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   }).forEach(function(ele) {
     Article.allArticles.push(new Article(ele));
-  })
+  });
 };
 
 Article.fetchAll = function() {
