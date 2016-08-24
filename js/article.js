@@ -54,5 +54,14 @@
     });
   };
 
+//here is my reduce function but I don't need it on my portfolio.
+  Article.numWordsAll = function() {
+    return Article.allArticles.map(function(currentArticle) {
+      return currentArticle.body.match(/\w+/g).length;
+    }).reduce(function(prev,cur){
+      return prev + cur;
+    });
+  };
+
   module.Article = Article;
 })(window);
