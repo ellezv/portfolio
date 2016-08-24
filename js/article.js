@@ -50,7 +50,6 @@
       localStorage.eTag = xhr.getResponseHeader('eTag');
       Article.loadAll(data);
       localStorage.projects = JSON.stringify(data);
-
       nextFunction();
     });
   };
