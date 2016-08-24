@@ -1,18 +1,16 @@
-var articles = [];
-
 /* Object constructor based on my data*/
 function Article(obj) {
-  this.author = obj.author;
-  this.publishedOn = obj.publishedOn;
-  this.title = obj.title;
-  this.body = obj.body;
-  this.category = obj.category;
+  for (keys in obj) {
+    this[keys] = obj[keys];
+  }
 }
+
+Article.allArticles = [];
 
 Article.prototype.toHtml = function() {
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
   this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-  var source = $('#article-template').html();
+  var source = $('#article-template').text();
   var templateRender = Handlebars.compile(source);
 
   return templateRender(this);
@@ -20,16 +18,23 @@ Article.prototype.toHtml = function() {
 
 
 /* sort method so object in myLocalData array with most recent publishedOn(=property) date (=value) will be first in the array */
-myLocalData.sort(function(a, b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+Article.loadAll = function(inputData) {
+  inputData.sort(function(a, b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  }).forEach(function(ele) {
+    Article.allArticles.push(new Article(ele));
+  })
+};
 
-/*  for each object in myLocalData array, create a new object with Article obj constructor, then push it to the articles array */
-myLocalData.forEach(function(obj) {
-  articles.push(new Article(obj));
-});
-
-/* appending each article to my html as a new <article> within my #articles section*/
-articles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
-});
+Article.fetchAll = function() {
+  if (localStorage.projects) {
+    Article.loadAll(JSON.parse(localStorage.projects));
+    articleView.renderIndex();
+  }else {
+    $.getJSON('data/projects.json', function(a) {
+      Article.loadAll(a);
+      localStorage.projects = JSON.stringify(a);
+      articleView.renderIndex();
+    });
+  }
+};
