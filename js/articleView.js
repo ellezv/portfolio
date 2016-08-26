@@ -1,6 +1,6 @@
 'use strict';
 (function(module) {
-  var articleView = {};
+  var articleView = {}; //JUDY: Same thing I advised in article.js to rename this to something other than 'articleView.' Might also be good to just rename your entire JS files too to be more relevant.
 
   articleView.handleNavMenu = function() {
     $('nav').on('click', '.nav-tab', function() {
@@ -11,6 +11,7 @@
     $('nav .nav-tab:first').click();
   };
 
+  //JUDY: Style-comment: It would be better to show your pictures first AND THEN have the 'READ MORE' displayed after pics are already being shown. A lazy user might not immediately care to click 'READ MORE' without seeing something interesting first, such as the pictures.
   articleView.handleShowMore = function() {
     $('.article-body').hide(); /*TODO: show only first paragraph */
     $('.screenshots').hide();
@@ -37,6 +38,7 @@
     });
     articleView.handleNavMenu();
     articleView.handleShowMore();
+    //JUDY: I had no idea your pics had this effect until I read this code. Can you use some CSS hover styling so a user can know that the pics are clickable and do this animation? E.g. cursor: pointer, or whatever makes it obvious that the pic should be clicked.
     $('.screenshots').flip(); /* TODO: fix the screenshots. Size and paths*/
   };
 
