@@ -55,6 +55,7 @@
   };
 
 //here is my reduce function but I don't need it on my portfolio.
+//TODO: make it actually do something for the portfolio.
   Article.numWordsAll = function() {
     return Article.allArticles.map(function(currentArticle) {
       return currentArticle.body.match(/\w+/g).length;
@@ -65,3 +66,7 @@
 
   module.Article = Article;
 })(window);
+
+
+/*TODO: Admin page with form to add another project?
+Google analytics?*/
