@@ -12,7 +12,7 @@
   };
 
   articleView.handleShowMore = function() {
-    $('.article-body').hide();
+    $('.article-body').hide(); /*TODO: show only first paragraph */
     $('.screenshots').hide();
     $('article').on('click', '.read-on', function() {
       event.preventDefault();
@@ -37,7 +37,7 @@
     });
     articleView.handleNavMenu();
     articleView.handleShowMore();
-    $('.screenshots').flip();
+    $('.screenshots').flip(); /* TODO: fix the screenshots. Size and paths*/
   };
 
   Article.fetchAll(articleView.renderIndex);
