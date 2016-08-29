@@ -3,8 +3,8 @@
   var aboutController = {};
 
   aboutController.reveal = function() {
-    $('#articles') .fadeOut();
-    $('#about-me').fadeIn();
+    $('#articles').hide();
+    $('#about-me').show();
   };
 
   module.aboutController = aboutController;
