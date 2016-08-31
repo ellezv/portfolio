@@ -4,10 +4,8 @@
   var repoCompiler = Handlebars.compile($('#repo-template').text());
 
   repoView.renderRepos = function() {
-    $('#about ul').empty().append(
-      reposObj.withTheAttribute('name')
-      .map(repoCompiler)
-    );
+    $('#about-me').append(repoCompiler); //TODO : FIGURE THIS SHIT OUT!!!
+
   };
 
   reposObj.requestRepos(repoView.renderRepos);
