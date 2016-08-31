@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
-    <link rel="stylesheet" href="css/vendor/reset.css">
+    <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="css/icons.css">
     <script id="article-template" type="text/x-handlebars-template">
   <article class="article-template" data-author="{{author}}" data-category="{{category}}">
@@ -43,10 +43,10 @@
         <nav>
           <div class="icon-menu"></div>
           <ul>
-            <li data-content="articles" class="nav-tab"><a href="#">Home</a></li>
-            <li data-content="about-me" class="nav-tab"><a href="#">About Me</a></li>
+            <li data-content="articles" class="nav-tab"><a href="/">Home</a></li>
+            <li data-content="about-me" class="nav-tab"><a href="/about">About Me</a></li>
             <li><a href="https://www.linkedin.com/in/maelle-vance-179487123" target="_blank"><span class="icon-linkedin">LinkedIn</span></a></li>
-            <li><a href="#" target="_blank"><span class="icon-github">Github</span></a></li>
+            <li><a href="https://github.com/ellezv" target="_blank"><span class="icon-github">Github</span></a></li>
           </ul>
         </nav>
       </section>
@@ -65,7 +65,11 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="js/article.js"></script>
-    <script src="js/articleView.js"></script>
+    <script src="vendor/page.js"></script>
+    <script src="js/model/article.js"></script>
+    <script src="js/view/articleView.js"></script>
+    <script src="js/controller/homeController.js"></script>
+    <script src="js/controller/aboutController.js"></script>
+    <script src="js/controller/routes.js"></script>
   </body>
 </html>

@@ -2,14 +2,6 @@
 (function(module) {
   var articleView = {};
 
-  articleView.handleNavMenu = function() {
-    $('nav').on('click', '.nav-tab', function() {
-      $('.menu-content').hide();
-      var $id = $(this).attr('data-content');
-      $('main').find('#' + $id).fadeIn();
-    });
-    $('nav .nav-tab:first').click();
-  };
 
   articleView.handleShowMore = function() {
     $('.article-body').hide(); /*TODO: show only first paragraph */
@@ -35,7 +27,6 @@
     Article.allArticles.forEach(function(a) {
       $('#articles').append(a.toHtml('#article-template'));
     });
-    articleView.handleNavMenu();
     articleView.handleShowMore();
     $('.screenshots').flip(); /* TODO: fix the screenshots. Size and paths*/
   };
