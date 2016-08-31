@@ -1,12 +1,13 @@
 'use strict';
 (function(module) {
   var repoView = {};
-  var repoCompiler = Handlebars.compile($('#repo-template').text());
+  var repoCompiler = Handlebars.compile($('#about-me-template').text());
 
-  repoView.renderRepos = function() {
-    $('#about-me').append(repoCompiler); //TODO : FIGURE THIS SHIT OUT!!!
-
+  repoView.renderFollowers = function() {
+    reposObj.followers.forEach(function() {
+      $('#about-me').append(repoCompiler); //TODO : FIGURE THIS SHIT OUT!!!
+    });
   };
 
-  reposObj.requestRepos(repoView.renderRepos);
+  reposObj.requestFollowers(reposView.renderFollowers);
 })(window);

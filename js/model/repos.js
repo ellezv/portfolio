@@ -1,20 +1,15 @@
 'use strict';
 (function(module) {
   var reposObj = {};
+  reposObj.followers = [];
 
-  reposObj.allRepos = [];
-
-  reposObj.requestRepos = function(callback) {
-
-    $.ajax({
-      url: 'https://api.github.com/users/ellezv/repos' + '?per_page=5' + '&sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + token},
-      success: function(data) {
-        reposObj.allRepos = data;
-        callback();
-      }
-    });
+  reposObj.requestFollowers = function(callback) {
+    $.when(
+     $.get('/github/users/ellezv/followers')
+        .done(function(data) {
+          reposObj.allRepos = data;
+        })
+    ).done(callback);
   };
 
   module.reposObj = reposObj;
