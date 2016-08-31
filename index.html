@@ -31,6 +31,12 @@
     <a href="#" class="read-on">Read on &rarr;</a>
   </article>
 </script>
+<script id="about-me-template" type="text/x-handlebars-template">
+  <a href={{html_url}}><h3>{{login}}</h3>
+  <img src={{avatar_url}} alt={{login}}></a>
+</script>
+
+</script>
   </head>
 
   <body>
@@ -55,9 +61,7 @@
       <section id="articles" class="menu-content">
       </section>
       <section id="about-me" class="menu-content">
-        <h1>Welcome to my portfolio</h1>
-        <p>I'm a former nurse turned web developper. I have a passion for healthcare, public health, data, tech and all the cool things they can do combined.<br>
-        In my spare time, you will find me having fun with my family, learning new things or trying to build something. Sometimes all at once.</p>
+        <h1>These folks are pretty neat. Check them out on Github!</h1>
       </section>
     </main>
     <footer>
@@ -67,6 +71,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="vendor/page.js"></script>
     <script src="js/model/article.js"></script>
+    <script src="js/model/repos.js"></script>
     <script src="js/view/articleView.js"></script>
     <script src="js/controller/homeController.js"></script>
     <script src="js/controller/aboutController.js"></script>
