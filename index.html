@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maelle Vance Portfolio</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -32,10 +32,8 @@
   </article>
 </script>
 <script id="about-me-template" type="text/x-handlebars-template">
-  <a href={{html_url}}><h3>{{login}}</h3>
-  <img src={{avatar_url}} alt={{login}}></a>
-</script>
-
+  <a href={{html_url}}><h4>{{login}}</h4>
+    <img src={{avatar_url}} alt={{login}}></a>
 </script>
   </head>
 
@@ -73,6 +71,7 @@
     <script src="js/model/article.js"></script>
     <script src="js/model/repos.js"></script>
     <script src="js/view/articleView.js"></script>
+    <script src="js/view/repoView.js"></script>
     <script src="js/controller/homeController.js"></script>
     <script src="js/controller/aboutController.js"></script>
     <script src="js/controller/routes.js"></script>

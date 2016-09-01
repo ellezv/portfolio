@@ -2,12 +2,14 @@
 (function(module) {
   var repoView = {};
   var repoCompiler = Handlebars.compile($('#about-me-template').text());
+  console.log(repoCompiler);
 
-  repoView.renderFollowers = function() {
-    reposObj.followers.forEach(function() {
-      $('#about-me').append(repoCompiler); //TODO : FIGURE THIS SHIT OUT!!!
-    });
+  repoView.renderRepos = function() {
+    $('#about-me').append(
+      reposObj.followers.map(repoCompiler)
+    );
   };
 
-  reposObj.requestFollowers(reposView.renderFollowers);
+  reposObj.requestFollowers(repoView.renderRepos);
+  module.repoView = repoView;
 })(window);

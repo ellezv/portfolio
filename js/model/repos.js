@@ -7,10 +7,18 @@
     $.when(
      $.get('/github/users/ellezv/followers')
         .done(function(data) {
-          reposObj.allRepos = data;
+          reposObj.followers = data;
+          console.log(reposObj.followers);
         })
     ).done(callback);
   };
 
+  reposObj.withTheAttribute = function(attr) {
+    return reposObj.allRepos.filter(function(aRepo) {
+      return aRepo[attr];
+    });
+  };
+
   module.reposObj = reposObj;
+
 })(window);
