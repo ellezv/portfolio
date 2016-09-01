@@ -9,32 +9,32 @@
     <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="css/icons.css">
     <script id="article-template" type="text/x-handlebars-template">
-  <article class="article-template" data-author="{{author}}" data-category="{{category}}">
-    <header class="article-header">
-      <h1>{{title}}</h1>
-      <div class="byline">
-        By <span>{{author}}</span>
-        {{publishStatus}}
-      </div>
-    </header>
-    <section class="article-body">
-      <p>{{body}}</p>
-    </section>
-    <div class="screenshots">
-      <div class="front">
-        <img src="{{imageFront}}" alt="{{title}} screenshot">
-      </div>
-      <div class="back">
-        <img src="{{imageBack}}" alt="{{title}} screenshot">
-      </div>
-    </div>
-    <a href="#" class="read-on">Read on &rarr;</a>
-  </article>
-</script>
-<script id="about-me-template" type="text/x-handlebars-template">
-  <a href={{html_url}}><h4>{{login}}</h4>
-    <img src={{avatar_url}} alt={{login}}></a>
-</script>
+      <article class="article-template" data-author="{{author}}" data-category="{{category}}">
+        <header class="article-header">
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <span>{{author}}</span>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">
+          <p>{{body}}</p>
+        </section>
+        <div class="screenshots">
+          <div class="front">
+            <img src="{{imageFront}}" alt="{{title}} screenshot">
+          </div>
+          <div class="back">
+            <img src="{{imageBack}}" alt="{{title}} screenshot">
+          </div>
+        </div>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+    <script id="about-me-template" type="text/x-handlebars-template">
+      <a href={{html_url}}><h4>{{login}}</h4>
+        <img src={{avatar_url}} alt={{login}}></a>
+    </script>
   </head>
 
   <body>
