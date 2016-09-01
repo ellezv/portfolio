@@ -25,3 +25,19 @@ nav ul {
 .screenshots {
   margin-bottom: 200px;
 }
+
+#about-me h1 {
+  text-align: center;
+}
+
+#about-me p {
+  margin-bottom: 20px;
+}
+#about-me a {
+  float: left;
+  margin-right: 10px;
+}
+
+#about-me img {
+  max-width: 180px;
+}

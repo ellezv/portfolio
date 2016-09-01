@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Maelle Vance Portfolio</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -9,28 +9,32 @@
     <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="css/icons.css">
     <script id="article-template" type="text/x-handlebars-template">
-  <article class="article-template" data-author="{{author}}" data-category="{{category}}">
-    <header class="article-header">
-      <h1>{{title}}</h1>
-      <div class="byline">
-        By <span>{{author}}</span>
-        {{publishStatus}}
-      </div>
-    </header>
-    <section class="article-body">
-      <p>{{body}}</p>
-    </section>
-    <div class="screenshots">
-      <div class="front">
-        <img src="{{imageFront}}" alt="{{title}} screenshot">
-      </div>
-      <div class="back">
-        <img src="{{imageBack}}" alt="{{title}} screenshot">
-      </div>
-    </div>
-    <a href="#" class="read-on">Read on &rarr;</a>
-  </article>
-</script>
+      <article class="article-template" data-author="{{author}}" data-category="{{category}}">
+        <header class="article-header">
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <span>{{author}}</span>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="article-body">
+          <p>{{body}}</p>
+        </section>
+        <div class="screenshots">
+          <div class="front">
+            <img src="{{imageFront}}" alt="{{title}} screenshot">
+          </div>
+          <div class="back">
+            <img src="{{imageBack}}" alt="{{title}} screenshot">
+          </div>
+        </div>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+    <script id="about-me-template" type="text/x-handlebars-template">
+      <a href={{html_url}}><h4>{{login}}</h4>
+        <img src={{avatar_url}} alt={{login}}></a>
+    </script>
   </head>
 
   <body>
@@ -55,9 +59,10 @@
       <section id="articles" class="menu-content">
       </section>
       <section id="about-me" class="menu-content">
-        <h1>Welcome to my portfolio</h1>
-        <p>I'm a former nurse turned web developper. I have a passion for healthcare, public health, data, tech and all the cool things they can do combined.<br>
+        <h1>About Me</h1>
+        <p>I'm a former nurse turned web developer. I have a passion for healthcare, public health, data, tech and all the cool things they can do combined.<br>
         In my spare time, you will find me having fun with my family, learning new things or trying to build something. Sometimes all at once.</p>
+        <h1>These folks are pretty neat. Check them out on Github!</h1>
       </section>
     </main>
     <footer>
@@ -67,7 +72,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="vendor/page.js"></script>
     <script src="js/model/article.js"></script>
+    <script src="js/model/repos.js"></script>
     <script src="js/view/articleView.js"></script>
+    <script src="js/view/repoView.js"></script>
     <script src="js/controller/homeController.js"></script>
     <script src="js/controller/aboutController.js"></script>
     <script src="js/controller/routes.js"></script>
